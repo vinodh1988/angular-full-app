@@ -40,3 +40,19 @@ RESTAPI
 				   
 				   generally response body would html, json, images files, pdf files, binary
 				   data or text data
+
+
+
+
+rest api?  ->Array of objects?
+
+         [rest]<- angular service <- Parent component -> n child components
+		 
+		 [/contacts]<-contactservice <- contactComponent ->contact-box
+		 
+		 
+		 In angular to make api call [get,post,delete,put..]
+		 we use an inbuilt service call httpclient
+		 httpclient is part of httpclientmodule
+		 
+		 for the service to work we need to import the above module
