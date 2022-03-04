@@ -1,27 +1,42 @@
-# RoutingApp2
+RESTAPI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    Webservice
+	 
+	 
+	 <technology1>-----------------------------> <technology2>
+	 
+	 
+	 [Webserver -[restapi]]------------------------> [response]
+	                       <-------------------------[request]
+						   
+						   
+		Request?
+		            Content-type? - what kind of data sent to server
+					Accept - what kind of data you want from server
+					Method - what you want the server to do
+					   HTTP VERB
+					   
+					      GET   - you want resource from the serve
+						  POST   - you want to send data to the server and server to process it
+						  DELETE  - you want server to delete the specified resource
+						  PATCH - You want to partially update
+						  PUT  - Updating/replacing resources in the server
+						  
+						  -------------
+						  OPTION
+						  HEAD
+						  CONNECT
+						  TRACE
+						  
+				client makes requests to end points ?
+				
+				    http://<ip>:8080/api/people  - URL
+					
+					En endpoint might be serving multiple methods - gET,post,put,patch
+					
+			Response
+			
+			       response header +response body
+				   
+				   generally response body would html, json, images files, pdf files, binary
+				   data or text data
