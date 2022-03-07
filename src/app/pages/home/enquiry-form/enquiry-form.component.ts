@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnquiryFormComponent implements OnInit {
 
+  fname:any;
+  lname:any;
+  email:any;
+  company:any;
+  message:any;
+  errors:string[]=[];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  submit(){
+    
   }
 
 }

@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { services } from '../models/services';
+
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,8 @@ import { services } from '../models/services';
 export class HomeService {
 
   constructor(private http:HttpClient) { }
+
+   httpOptions:any;
 
   getServices():Observable<any>
   {
@@ -19,4 +21,14 @@ export class HomeService {
   {
     return this.http.get("http://localhost:4500/details/"+id)
   }
+
+  postEnquiry(obj:any):Observable<any>{
+    this.httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json'
+      })
+    }
+    return this.http.post("http://localhost:4500/enquiries",obj,this.httpOptions);
+   }
+
 }
