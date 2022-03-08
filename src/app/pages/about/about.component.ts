@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from 'src/app/services/home.service';
 
 @Component({
   selector: 'app-about',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+  types:string[]=["All","Branding and Communication","Inbound & Content Marketing","Film & Webinar","Digital Marketing","ECommerce & Websites",
+  "Market Analysis"]
 
-  constructor() { }
+  now:string="All";
+
+  flist:any;
+
+  constructor(private hs:HomeService) { }
 
   ngOnInit(): void {
+
+    this.hs.getFeedbacks().subscribe({
+      next: (data:any)=>this.flist=data,
+      error:(error:any)=>this.flist=[]
+    })
   }
 
 }

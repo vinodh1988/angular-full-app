@@ -15,6 +15,8 @@ import { ServicesComponent } from './pages/home/services/services.component';
 import { DetailsComponent } from './pages/home/services/details/details.component';
 import { EnquiryFormComponent } from './pages/home/enquiry-form/enquiry-form.component';
 import { FormsModule } from '@angular/forms';
+import { FeedbackComponent } from './pages/about/feedback/feedback.component';
+import { FeedbackBoxComponent } from './pages/about/feedback-box/feedback-box.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { FormsModule } from '@angular/forms';
     ContactBoxComponent,
     ServicesComponent,
     DetailsComponent,
-    EnquiryFormComponent
+    EnquiryFormComponent,
+    FeedbackComponent,
+    FeedbackBoxComponent
   ],
   imports: [
     BrowserModule,
