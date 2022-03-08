@@ -56,3 +56,41 @@ rest api?  ->Array of objects?
 		 httpclient is part of httpclientmodule
 		 
 		 for the service to work we need to import the above module
+
+
+### Pipes
+
+
+Pipes
+
+      Pipes are generally used in templates 
+
+	  it is applied in the interpolation
+
+      the target of a pipe could be either scalar variable or array variable
+
+	  pipes can applied on scalar values like number, string 
+
+	  it can also be applied on array
+
+	  There are inbuilt pipes for scalar variables
+
+	  but there is no inbuilt pipe for arrays
+
+Pipes has following parts:
+
+  pipename
+  target
+  parameters
+
+   ex:  {{price |  currency:'USD'}}
+   in the above example,
+
+   | is the operator representing pipe
+   price is the target
+   currency is the pipe name
+   usd is the parameter [there can be multiple paramaters]
+
+   pipe when applied on scalar usually it formats the target the data 
+
+   pipe when applied on list/array usually it filters the elements

@@ -17,6 +17,7 @@ import { EnquiryFormComponent } from './pages/home/enquiry-form/enquiry-form.com
 import { FormsModule } from '@angular/forms';
 import { FeedbackComponent } from './pages/about/feedback/feedback.component';
 import { FeedbackBoxComponent } from './pages/about/feedback-box/feedback-box.component';
+import { FeedfilterPipe } from './pipes/feedfilter.pipe';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { FeedbackBoxComponent } from './pages/about/feedback-box/feedback-box.co
     DetailsComponent,
     EnquiryFormComponent,
     FeedbackComponent,
-    FeedbackBoxComponent
+    FeedbackBoxComponent,
+    FeedfilterPipe
   ],
   imports: [
     BrowserModule,

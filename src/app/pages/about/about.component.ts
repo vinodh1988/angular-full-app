@@ -10,6 +10,8 @@ export class AboutComponent implements OnInit {
   types:string[]=["All","Branding and Communication","Inbound & Content Marketing","Film & Webinar","Digital Marketing","ECommerce & Websites",
   "Market Analysis"]
 
+  revenue:number=50;
+
   now:string="All";
 
   flist:any;
