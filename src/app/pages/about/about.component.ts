@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { feedback } from 'src/app/models/feedback';
 import { HomeService } from 'src/app/services/home.service';
 
 @Component({
@@ -14,14 +15,14 @@ export class AboutComponent implements OnInit {
 
   now:string="All";
 
-  flist:any;
+  flist:feedback[]=[];
 
   constructor(private hs:HomeService) { }
 
   ngOnInit(): void {
 
     this.hs.getFeedbacks().subscribe({
-      next: (data:any)=>this.flist=data,
+      next: (data:feedback[])=>this.flist=data,
       error:(error:any)=>this.flist=[]
     })
   }

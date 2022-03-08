@@ -22,10 +22,10 @@ export class HomeService {
     return this.http.get("http://localhost:4500/details/"+id)
   }
 
-  getFeedbacks():Observable<object>{
+  getFeedbacks():Observable<any>{
     return this.http.get("http://localhost:4500/feedbacks")
   }
-  
+
   postEnquiry(obj:any):Observable<any>{
     this.httpOptions = {
       headers: new HttpHeaders({
