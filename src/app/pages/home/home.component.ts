@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { services } from 'src/app/models/services';
 import { HomeService } from 'src/app/services/home.service';
 
@@ -7,10 +7,10 @@ import { HomeService } from 'src/app/services/home.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit,OnDestroy {
 slist:services[]=[];
   constructor(private hs:HomeService) { 
-      
+      console.log("Home component instantiated")
   }
 
   ngOnInit(): void {
@@ -22,4 +22,7 @@ slist:services[]=[];
     )
   }
 
+  ngOnDestroy(): void {
+    console.log("Home component Destroyed")
+  }
 }
