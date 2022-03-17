@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { HomeService } from 'src/app/services/home.service';
 
 @Component({
@@ -14,10 +15,17 @@ export class EnquiryFormComponent implements OnInit {
   company:any;
   message:any;
   errors:string[]=[];
+  lang:string="english";
 
-  constructor(private hs:HomeService) { }
+  constructor(private hs:HomeService,private ts:TranslateService) {
+      this.ts.use(this.lang)
+   }
 
   ngOnInit(): void {
+  }
+
+  setLang(){
+    this.ts.use(this.lang)
   }
 
   submit(){
