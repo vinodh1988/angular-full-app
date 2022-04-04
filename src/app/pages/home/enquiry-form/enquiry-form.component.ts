@@ -25,6 +25,7 @@ export class EnquiryFormComponent implements OnInit {
   }
 
   setLang(){
+  
     this.ts.use(this.lang)
   }
 
