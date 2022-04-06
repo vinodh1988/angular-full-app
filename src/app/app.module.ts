@@ -20,6 +20,7 @@ import { FeedbackBoxComponent } from './pages/about/feedback-box/feedback-box.co
 import { FeedfilterPipe } from './pipes/feedfilter.pipe';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { FunPipe } from './pipes/fun.pipe';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient,'./assets/i18n/', '.json');
@@ -39,7 +40,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     EnquiryFormComponent,
     FeedbackComponent,
     FeedbackBoxComponent,
-    FeedfilterPipe
+    FeedfilterPipe,
+    FunPipe
   ],
   imports: [
     BrowserModule,
