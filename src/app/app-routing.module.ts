@@ -14,6 +14,11 @@ const routes: Routes = [
 
   
 ];
+/*
+home/1
+home/2
+home/3
+*/
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

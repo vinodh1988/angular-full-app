@@ -94,3 +94,35 @@ Pipes has following parts:
    pipe when applied on scalar usually it formats the target the data 
 
    pipe when applied on list/array usually it filters the elements
+
+
+
+
+Pipes
+
+     Pipe is a feature which is used in templates
+	 
+	 pipe can applied on scalar variables of type string,number and
+	 boolean
+	 
+	 it can also be applied on array
+	 
+	 if applied on string,number and boolean usually it will be
+	 formatted ll get a new form
+	 
+	 {{price | currency : 'usd'}}
+	 
+	 three parts in a pipe
+	 
+	 1. target [price]
+	 2. pipe [currency]
+	 3. parameters [optional, 'usd']
+	 
+	    paramters can be many
+		
+		in general if pipe is applided on arrays usually 
+		it will be filtered
+		
+		to generate pipes we
+		
+		ng g p pipes/mypipe
